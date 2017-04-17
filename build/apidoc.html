@@ -1,0 +1,1605 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/pebble/pebble-api-node"
+
+    >pebble-api (v0.2.2)</a>
+</h1>
+<h4>Pebble API client</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pebble-api">module pebble-api</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pebble-api.pebble-api">
+            function <span class="apidocSignatureSpan"></span>pebble-api
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pebble-api.Pin">
+            function <span class="apidocSignatureSpan">pebble-api.</span>Pin
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pebble-api.Pin.Action">
+            function <span class="apidocSignatureSpan">pebble-api.</span>Pin.Action
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pebble-api.Pin.Layout">
+            function <span class="apidocSignatureSpan">pebble-api.</span>Pin.Layout
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pebble-api.Pin.Notification">
+            function <span class="apidocSignatureSpan">pebble-api.</span>Pin.Notification
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pebble-api.Pin.Reminder">
+            function <span class="apidocSignatureSpan">pebble-api.</span>Pin.Reminder
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pebble-api.Pin.prototype.addAction">
+            function <span class="apidocSignatureSpan">pebble-api.</span>Pin.prototype.addAction
+            <span class="apidocSignatureSpan">(action)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pebble-api.Pin.prototype.addReminder">
+            function <span class="apidocSignatureSpan">pebble-api.</span>Pin.prototype.addReminder
+            <span class="apidocSignatureSpan">(reminder)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pebble-api.Timeline">
+            function <span class="apidocSignatureSpan">pebble-api.</span>Timeline
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pebble-api.toString">
+            function <span class="apidocSignatureSpan">pebble-api.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pebble-api.</span>Pin.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pebble-api.</span>errorCodes</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pebble-api.Pin">module pebble-api.Pin</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pebble-api.Pin.Pin">
+            function <span class="apidocSignatureSpan">pebble-api.</span>Pin
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pebble-api.Pin.Action">
+            function <span class="apidocSignatureSpan">pebble-api.Pin.</span>Action
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pebble-api.Pin.Layout">
+            function <span class="apidocSignatureSpan">pebble-api.Pin.</span>Layout
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pebble-api.Pin.Notification">
+            function <span class="apidocSignatureSpan">pebble-api.Pin.</span>Notification
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pebble-api.Pin.Reminder">
+            function <span class="apidocSignatureSpan">pebble-api.Pin.</span>Reminder
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pebble-api.Pin.</span>ActionType</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pebble-api.Pin.</span>Icon</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pebble-api.Pin.</span>LayoutType</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pebble-api.Pin.Action">module pebble-api.Pin.Action</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pebble-api.Pin.Action.Action">
+            function <span class="apidocSignatureSpan">pebble-api.Pin.</span>Action
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pebble-api.Pin.Layout">module pebble-api.Pin.Layout</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pebble-api.Pin.Layout.Layout">
+            function <span class="apidocSignatureSpan">pebble-api.Pin.</span>Layout
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pebble-api.Pin.Notification">module pebble-api.Pin.Notification</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pebble-api.Pin.Notification.Notification">
+            function <span class="apidocSignatureSpan">pebble-api.Pin.</span>Notification
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pebble-api.Pin.Reminder">module pebble-api.Pin.Reminder</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pebble-api.Pin.Reminder.Reminder">
+            function <span class="apidocSignatureSpan">pebble-api.Pin.</span>Reminder
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pebble-api.Pin.prototype">module pebble-api.Pin.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pebble-api.Pin.prototype.addAction">
+            function <span class="apidocSignatureSpan">pebble-api.Pin.prototype.</span>addAction
+            <span class="apidocSignatureSpan">(action)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pebble-api.Pin.prototype.addReminder">
+            function <span class="apidocSignatureSpan">pebble-api.Pin.prototype.</span>addReminder
+            <span class="apidocSignatureSpan">(reminder)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pebble-api.Pin.prototype.addAction">module pebble-api.Pin.prototype.addAction</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pebble-api.Pin.prototype.addAction.addAction">
+            function <span class="apidocSignatureSpan">pebble-api.Pin.prototype.</span>addAction
+            <span class="apidocSignatureSpan">(action)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pebble-api.Pin.prototype.addReminder">module pebble-api.Pin.prototype.addReminder</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pebble-api.Pin.prototype.addReminder.addReminder">
+            function <span class="apidocSignatureSpan">pebble-api.Pin.prototype.</span>addReminder
+            <span class="apidocSignatureSpan">(reminder)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pebble-api.toString">module pebble-api.toString</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pebble-api.toString.toString">
+            function <span class="apidocSignatureSpan">pebble-api.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pebble-api" id="apidoc.module.pebble-api">module pebble-api</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pebble-api.pebble-api" id="apidoc.element.pebble-api.pebble-api">
+        function <span class="apidocSignatureSpan"></span>pebble-api
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pebble-api = function (opts) {
+  opts = opts || {};
+
+  this._apiKey = opts.apiKey || process.env.PEBBLE_TIMELINE_API_KEY;
+
+  this._apiRoot = opts.apiRoot || process.env.PEBBLE_TIMELINE_API_ROOT || API_ROOT;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pebble-api.Pin" id="apidoc.element.pebble-api.Pin">
+        function <span class="apidocSignatureSpan">pebble-api.</span>Pin
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Pin = function (opts) {
+
+  this.reminders = [];
+  this.actions = [];
+
+  if (opts &#x26;&#x26; opts.id) {
+    if (typeof opts.id !== &#x27;string&#x27;) {
+      throw new Error(&#x27;Expected id to be a string.&#x27;);
+    }
+    this.id = opts.id;
+  }
+
+  if (opts &#x26;&#x26; opts.time) {
+    if (!(opts.time instanceof Date)) {
+      throw new Error(&#x27;Expected time to be a Date.&#x27;);
+    }
+    this.time = opts.time;
+  }
+
+  if (opts &#x26;&#x26; opts.duration) {
+    if (typeof opts.duration !== &#x27;number&#x27;) {
+      throw new Error(&#x27;Expected duration to be a number.&#x27;);
+    }
+    this.duration = opts.duration;
+  }
+
+  if (opts &#x26;&#x26; opts.createNotification) {
+    this.createNotification = opts.createNotification instanceof Notification ?
+      opts.createNotification : new Notification(opts.createNotification);
+  }
+
+  if (opts &#x26;&#x26; opts.updateNotification) {
+    if (!opts.updateNotification.time) {
+      throw new Error(&#x27;`time` is required by updateNotification.&#x27;);
+    }
+    this.updateNotification = opts.updateNotification instanceof Notification ?
+      opts.updateNotification : new Notification(opts.updateNotification);
+  }
+
+  if (opts &#x26;&#x26; opts.layout) {
+    if (!(opts.layout instanceof Layout)) {
+      opts.layout = new Layout(opts.layout);
+    }
+    this.layout = opts.layout;
+  }
+
+  if (opts &#x26;&#x26; opts.reminders) {
+    if (!(opts.reminders instanceof Array)) {
+      throw new Error(&#x27;Expected reminders to be an array.&#x27;);
+    }
+    opts.reminders.forEach(function (reminder) {
+      this.reminders.push(new Reminder(reminder));
+    }.bind(this));
+  }
+
+  if (opts &#x26;&#x26; opts.actions) {
+    if (!(opts.actions instanceof Array)) {
+      throw new Error(&#x27;Expected actions to be an array.&#x27;);
+    }
+    opts.actions.forEach(function (action) {
+      this.actions.push(new Action(action));
+    }.bind(this));
+  }
+
+  if (!this.time) {
+    throw new Error(&#x27;`time` is required by Pin.&#x27;);
+  }
+
+  if (!this.layout) {
+    throw new Error(&#x27;`layout` is required by Pin.&#x27;);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```js
+var Timeline = require(&#x27;pebble-api&#x27;).Timeline;
+
+var timeline = new Timeline();
+
+var userToken = &#x27;831ac9f096134d8f841b63bb5e80bda3&#x27;;
+
+var pin = new Timeline.<span class="apidocCodeKeywordSpan">Pin</span>({
+id: &#x27;test-pin-5245&#x27;,
+time: new Date(),
+duration: 10,
+layout: new Timeline.Pin.Layout({
+  type: Timeline.Pin.LayoutType.GENERIC_PIN,
+  tinyIcon: Timeline.Pin.Icon.NOTIFICATION_FLAG,
+  title: &#x27;Pin Title&#x27;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pebble-api.Pin.Action" id="apidoc.element.pebble-api.Pin.Action">
+        function <span class="apidocSignatureSpan">pebble-api.</span>Pin.Action
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Pin.Action = function (opts) {
+
+  if (opts &#x26;&#x26; opts.title) {
+    if (typeof opts.title !== &#x27;string&#x27;) {
+      throw new Error(&#x27;Expected title to be a string.&#x27;);
+    }
+    this.title = opts.title;
+  }
+
+  if (opts &#x26;&#x26; opts.type) {
+    if (typeof opts.type !== &#x27;string&#x27;) {
+      throw new Error(&#x27;Expected type to be a string.&#x27;);
+    }
+    this.type = opts.type;
+  }
+
+  if (opts &#x26;&#x26; opts.launchCode) {
+    if (typeof opts.launchCode !== &#x27;number&#x27;) {
+      throw new Error(&#x27;Expected launchCode to be a number.&#x27;);
+    }
+    this.launchCode = opts.launchCode;
+  }
+
+  if (!this.type) {
+    throw new Error(&#x27;`type` is required by Action.&#x27;);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pebble-api.Pin.Layout" id="apidoc.element.pebble-api.Pin.Layout">
+        function <span class="apidocSignatureSpan">pebble-api.</span>Pin.Layout
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Pin.Layout = function (opts) {
+
+  if (opts &#x26;&#x26; opts.type) {
+    if (typeof opts.type !== &#x27;string&#x27;) {
+      throw new Error(&#x27;Expected type to be a string.&#x27;);
+    }
+    this.type = opts.type;
+  }
+
+  if (opts &#x26;&#x26; opts.title) {
+    if (typeof opts.title !== &#x27;string&#x27;) {
+      throw new Error(&#x27;Expected title to be a string.&#x27;);
+    }
+    this.title = opts.title;
+  }
+
+  if (opts &#x26;&#x26; opts.shortTitle) {
+    if (typeof opts.shortTitle !== &#x27;string&#x27;) {
+      throw new Error(&#x27;Expected shortTitle to be a string.&#x27;);
+    }
+    this.shortTitle = opts.shortTitle;
+  }
+
+  if (opts &#x26;&#x26; opts.subtitle) {
+    if (typeof opts.subtitle !== &#x27;string&#x27;) {
+      throw new Error(&#x27;Expected subtitle to be a string.&#x27;);
+    }
+    this.subtitle = opts.subtitle;
+  }
+
+  if (opts &#x26;&#x26; opts.body) {
+    if (typeof opts.body !== &#x27;string&#x27;) {
+      throw new Error(&#x27;Expected body to be a string.&#x27;);
+    }
+    this.body = opts.body;
+  }
+
+  if (opts &#x26;&#x26; opts.tinyIcon) {
+    if (typeof opts.tinyIcon !== &#x27;string&#x27;) {
+      throw new Error(&#x27;Expected tinyIcon to be a string.&#x27;);
+    }
+    this.tinyIcon = opts.tinyIcon;
+  }
+
+  if (opts &#x26;&#x26; opts.smallIcon) {
+    if (typeof opts.smallIcon !== &#x27;string&#x27;) {
+      throw new Error(&#x27;Expected smallIcon to be a string.&#x27;);
+    }
+    this.smallIcon = opts.smallIcon;
+  }
+
+  if (opts &#x26;&#x26; opts.largeIcon) {
+    if (typeof opts.largeIcon !== &#x27;string&#x27;) {
+      throw new Error(&#x27;Expected largeIcon to be a string.&#x27;);
+    }
+    this.largeIcon = opts.largeIcon;
+  }
+
+  if (opts &#x26;&#x26; opts.foregroundColor) {
+    if (typeof opts.foregroundColor !== &#x27;string&#x27;) {
+      throw new Error(&#x27;Expected foregroundColor to be a string.&#x27;);
+    }
+    this.foregroundColor = opts.foregroundColor;
+  }
+
+  if (opts &#x26;&#x26; opts.primaryColor) {
+    if (typeof opts.primaryColor !== &#x27;string&#x27;) {
+      throw new Error(&#x27;Expected primaryColor to be a string.&#x27;);
+    }
+    this.primaryColor = opts.primaryColor;
+  }
+
+  if (opts &#x26;&#x26; opts.secondaryColor) {
+    if (typeof opts.secondaryColor !== &#x27;string&#x27;) {
+      throw new Error(&#x27;Expected secondaryColor to be a string.&#x27;);
+    }
+    this.secondaryColor = opts.secondaryColor;
+  }
+
+  if (opts &#x26;&#x26; opts.backgroundColor) {
+    if (typeof opts.backgroundColor !== &#x27;string&#x27;) {
+      throw new Error(&#x27;Expected backgroundColor to be a string.&#x27;);
+    }
+    this.backgroundColor = opts.backgroundColor;
+  }
+
+  if (opts &#x26;&#x26; opts.headings) {
+    if (!(opts.headings instanceof Array)) {
+      throw new Error(&#x27;Expected headings to be an array.&#x27;);
+    }
+    opts.headings.forEach(function (heading) {
+      if (typeof heading !== &#x27;string&#x27;) {
+        throw new Error(&#x27;Expected headings array to contain strings.&#x27;);
+      }
+    });
+    this.headings = opts.headings;
+  }
+
+  if (opts &#x26;&#x26; opts.paragraphs) {
+    if (!(opts.paragraphs instanceof Array)) {
+      throw new Error(&#x27;Expected paragraphs to be an array.&#x27;);
+    }
+    opts.paragraphs.forEach(function (paragraph) {
+      if (typeof paragraph !== &#x27;string&#x27;) {
+        throw new Error(&#x27;Expected paragraphs array to contain strings.&#x27;);
+      }
+    });
+    this.paragraphs = opts.paragraphs;
+  }
+
+  if (this.headings || this.paragraphs) {
+    if (!this.headings) {
+      throw new Error(&#x27;Expected headings as paragraphs is set.&#x27;);
+    }
+    if (!this.paragraphs) {
+      throw new Error(&#x27;Expected paragraphs as headings is set.&#x27;);
+    }
+    if (this.headings.length !== this.paragraphs.length) {
+      throw new Error(&#x27;Number of headings must equal the number of paragraphs.&#x27;);
+    }
+  }
+
+  if (opts &#x26;&#x26; opts.lastUpdated) {
+    if (!(opts.lastUpdated instanceof Date)) {
+      throw new Error(&#x27;Expected lastUpdated to be a Date.&#x27;);
+    }
+    this.lastUpdated = opts.lastUpdated;
+  }
+
+  if (opts &#x26;&#x26; opts.locationName) {
+    if (typeof opts.locationName !== &#x27;string&#x27;) {
+      throw new Error(&#x27;Expected locationName to be a string.&#x27;);
+    }
+    this.locationName = opts.locationName;
+  }
+
+  if (opts &#x26;&#x26; opts.sender) {
+    if (typeof opts.sender !== &#x27;string&#x27;) {
+      throw new Error(&#x27;Expected sender to be a string.&#x27;);
+    }
+    this.sender = opts.sender;
+  }
+
+  if (opts &#x26;&#x26; opts.broadcaster) {
+    if (typeof opts.broadcaster !== &#x27;string&#x27;) {
+      throw new Error(&#x27;Expected ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var userToken = &#x27;831ac9f096134d8f841b63bb5e80bda3&#x27;;
+
+var pin = new Timeline.Pin({
+  id: &#x27;test-pin-5245&#x27;,
+  time: new Date(),
+  duration: 10,
+  layout: new Timeline.<span class="apidocCodeKeywordSpan">Pin.Layout</span>({
+    type: Timeline.Pin.LayoutType.GENERIC_PIN,
+    tinyIcon: Timeline.Pin.Icon.NOTIFICATION_FLAG,
+    title: &#x27;Pin Title&#x27;
+  })
+});
+
+timeline.sendUserPin(userToken, pin, function (err) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pebble-api.Pin.Notification" id="apidoc.element.pebble-api.Pin.Notification">
+        function <span class="apidocSignatureSpan">pebble-api.</span>Pin.Notification
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Pin.Notification = function (opts) {
+
+  if (opts &#x26;&#x26; opts.time) {
+    if (!(opts.time instanceof Date)) {
+      throw new Error(&#x27;Expected time to be a Date.&#x27;);
+    }
+    this.time = opts.time;
+  }
+
+  if (opts &#x26;&#x26; opts.layout) {
+    this.layout =
+      opts.layout instanceof Layout ? opts.layout : new Layout(opts.layout);
+  }
+
+  if (!this.layout) {
+    throw new Error(&#x27;`layout` is required by Notification.&#x27;);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pebble-api.Pin.Reminder" id="apidoc.element.pebble-api.Pin.Reminder">
+        function <span class="apidocSignatureSpan">pebble-api.</span>Pin.Reminder
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Pin.Reminder = function (opts) {
+  if (opts &#x26;&#x26; opts.time) {
+    if (!(opts.time instanceof Date)) {
+      throw new Error(&#x27;Expected time to be a Date.&#x27;);
+    }
+    this.time = opts.time;
+  }
+
+  if (opts &#x26;&#x26; opts.layout) {
+    this.layout =
+      opts.layout instanceof Layout ? opts.layout : new Layout(opts.layout);
+  }
+
+  if (!this.time) {
+    throw new Error(&#x27;`time` is required by Reminder.&#x27;);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pebble-api.Pin.prototype.addAction" id="apidoc.element.pebble-api.Pin.prototype.addAction">
+        function <span class="apidocSignatureSpan">pebble-api.</span>Pin.prototype.addAction
+        <span class="apidocSignatureSpan">(action)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Pin.prototype.addAction = function (action) {
+  this.actions.push(
+    action instanceof Action ? action : new Action(action)
+  );
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pebble-api.Pin.prototype.addReminder" id="apidoc.element.pebble-api.Pin.prototype.addReminder">
+        function <span class="apidocSignatureSpan">pebble-api.</span>Pin.prototype.addReminder
+        <span class="apidocSignatureSpan">(reminder)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Pin.prototype.addReminder = function (reminder) {
+  this.reminders.push(
+    reminder instanceof Reminder ? reminder : new Reminder(reminder)
+  );
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pebble-api.Timeline" id="apidoc.element.pebble-api.Timeline">
+        function <span class="apidocSignatureSpan">pebble-api.</span>Timeline
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Timeline = function (opts) {
+  opts = opts || {};
+
+  this._apiKey = opts.apiKey || process.env.PEBBLE_TIMELINE_API_KEY;
+
+  this._apiRoot = opts.apiRoot || process.env.PEBBLE_TIMELINE_API_ROOT || API_ROOT;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pebble-api.toString" id="apidoc.element.pebble-api.toString">
+        function <span class="apidocSignatureSpan">pebble-api.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pebble-api.Pin" id="apidoc.module.pebble-api.Pin">module pebble-api.Pin</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pebble-api.Pin.Pin" id="apidoc.element.pebble-api.Pin.Pin">
+        function <span class="apidocSignatureSpan">pebble-api.</span>Pin
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Pin = function (opts) {
+
+  this.reminders = [];
+  this.actions = [];
+
+  if (opts &#x26;&#x26; opts.id) {
+    if (typeof opts.id !== &#x27;string&#x27;) {
+      throw new Error(&#x27;Expected id to be a string.&#x27;);
+    }
+    this.id = opts.id;
+  }
+
+  if (opts &#x26;&#x26; opts.time) {
+    if (!(opts.time instanceof Date)) {
+      throw new Error(&#x27;Expected time to be a Date.&#x27;);
+    }
+    this.time = opts.time;
+  }
+
+  if (opts &#x26;&#x26; opts.duration) {
+    if (typeof opts.duration !== &#x27;number&#x27;) {
+      throw new Error(&#x27;Expected duration to be a number.&#x27;);
+    }
+    this.duration = opts.duration;
+  }
+
+  if (opts &#x26;&#x26; opts.createNotification) {
+    this.createNotification = opts.createNotification instanceof Notification ?
+      opts.createNotification : new Notification(opts.createNotification);
+  }
+
+  if (opts &#x26;&#x26; opts.updateNotification) {
+    if (!opts.updateNotification.time) {
+      throw new Error(&#x27;`time` is required by updateNotification.&#x27;);
+    }
+    this.updateNotification = opts.updateNotification instanceof Notification ?
+      opts.updateNotification : new Notification(opts.updateNotification);
+  }
+
+  if (opts &#x26;&#x26; opts.layout) {
+    if (!(opts.layout instanceof Layout)) {
+      opts.layout = new Layout(opts.layout);
+    }
+    this.layout = opts.layout;
+  }
+
+  if (opts &#x26;&#x26; opts.reminders) {
+    if (!(opts.reminders instanceof Array)) {
+      throw new Error(&#x27;Expected reminders to be an array.&#x27;);
+    }
+    opts.reminders.forEach(function (reminder) {
+      this.reminders.push(new Reminder(reminder));
+    }.bind(this));
+  }
+
+  if (opts &#x26;&#x26; opts.actions) {
+    if (!(opts.actions instanceof Array)) {
+      throw new Error(&#x27;Expected actions to be an array.&#x27;);
+    }
+    opts.actions.forEach(function (action) {
+      this.actions.push(new Action(action));
+    }.bind(this));
+  }
+
+  if (!this.time) {
+    throw new Error(&#x27;`time` is required by Pin.&#x27;);
+  }
+
+  if (!this.layout) {
+    throw new Error(&#x27;`layout` is required by Pin.&#x27;);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```js
+var Timeline = require(&#x27;pebble-api&#x27;).Timeline;
+
+var timeline = new Timeline();
+
+var userToken = &#x27;831ac9f096134d8f841b63bb5e80bda3&#x27;;
+
+var pin = new Timeline.<span class="apidocCodeKeywordSpan">Pin</span>({
+id: &#x27;test-pin-5245&#x27;,
+time: new Date(),
+duration: 10,
+layout: new Timeline.Pin.Layout({
+  type: Timeline.Pin.LayoutType.GENERIC_PIN,
+  tinyIcon: Timeline.Pin.Icon.NOTIFICATION_FLAG,
+  title: &#x27;Pin Title&#x27;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pebble-api.Pin.Action" id="apidoc.element.pebble-api.Pin.Action">
+        function <span class="apidocSignatureSpan">pebble-api.Pin.</span>Action
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Action = function (opts) {
+
+  if (opts &#x26;&#x26; opts.title) {
+    if (typeof opts.title !== &#x27;string&#x27;) {
+      throw new Error(&#x27;Expected title to be a string.&#x27;);
+    }
+    this.title = opts.title;
+  }
+
+  if (opts &#x26;&#x26; opts.type) {
+    if (typeof opts.type !== &#x27;string&#x27;) {
+      throw new Error(&#x27;Expected type to be a string.&#x27;);
+    }
+    this.type = opts.type;
+  }
+
+  if (opts &#x26;&#x26; opts.launchCode) {
+    if (typeof opts.launchCode !== &#x27;number&#x27;) {
+      throw new Error(&#x27;Expected launchCode to be a number.&#x27;);
+    }
+    this.launchCode = opts.launchCode;
+  }
+
+  if (!this.type) {
+    throw new Error(&#x27;`type` is required by Action.&#x27;);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pebble-api.Pin.Layout" id="apidoc.element.pebble-api.Pin.Layout">
+        function <span class="apidocSignatureSpan">pebble-api.Pin.</span>Layout
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Layout = function (opts) {
+
+  if (opts &#x26;&#x26; opts.type) {
+    if (typeof opts.type !== &#x27;string&#x27;) {
+      throw new Error(&#x27;Expected type to be a string.&#x27;);
+    }
+    this.type = opts.type;
+  }
+
+  if (opts &#x26;&#x26; opts.title) {
+    if (typeof opts.title !== &#x27;string&#x27;) {
+      throw new Error(&#x27;Expected title to be a string.&#x27;);
+    }
+    this.title = opts.title;
+  }
+
+  if (opts &#x26;&#x26; opts.shortTitle) {
+    if (typeof opts.shortTitle !== &#x27;string&#x27;) {
+      throw new Error(&#x27;Expected shortTitle to be a string.&#x27;);
+    }
+    this.shortTitle = opts.shortTitle;
+  }
+
+  if (opts &#x26;&#x26; opts.subtitle) {
+    if (typeof opts.subtitle !== &#x27;string&#x27;) {
+      throw new Error(&#x27;Expected subtitle to be a string.&#x27;);
+    }
+    this.subtitle = opts.subtitle;
+  }
+
+  if (opts &#x26;&#x26; opts.body) {
+    if (typeof opts.body !== &#x27;string&#x27;) {
+      throw new Error(&#x27;Expected body to be a string.&#x27;);
+    }
+    this.body = opts.body;
+  }
+
+  if (opts &#x26;&#x26; opts.tinyIcon) {
+    if (typeof opts.tinyIcon !== &#x27;string&#x27;) {
+      throw new Error(&#x27;Expected tinyIcon to be a string.&#x27;);
+    }
+    this.tinyIcon = opts.tinyIcon;
+  }
+
+  if (opts &#x26;&#x26; opts.smallIcon) {
+    if (typeof opts.smallIcon !== &#x27;string&#x27;) {
+      throw new Error(&#x27;Expected smallIcon to be a string.&#x27;);
+    }
+    this.smallIcon = opts.smallIcon;
+  }
+
+  if (opts &#x26;&#x26; opts.largeIcon) {
+    if (typeof opts.largeIcon !== &#x27;string&#x27;) {
+      throw new Error(&#x27;Expected largeIcon to be a string.&#x27;);
+    }
+    this.largeIcon = opts.largeIcon;
+  }
+
+  if (opts &#x26;&#x26; opts.foregroundColor) {
+    if (typeof opts.foregroundColor !== &#x27;string&#x27;) {
+      throw new Error(&#x27;Expected foregroundColor to be a string.&#x27;);
+    }
+    this.foregroundColor = opts.foregroundColor;
+  }
+
+  if (opts &#x26;&#x26; opts.primaryColor) {
+    if (typeof opts.primaryColor !== &#x27;string&#x27;) {
+      throw new Error(&#x27;Expected primaryColor to be a string.&#x27;);
+    }
+    this.primaryColor = opts.primaryColor;
+  }
+
+  if (opts &#x26;&#x26; opts.secondaryColor) {
+    if (typeof opts.secondaryColor !== &#x27;string&#x27;) {
+      throw new Error(&#x27;Expected secondaryColor to be a string.&#x27;);
+    }
+    this.secondaryColor = opts.secondaryColor;
+  }
+
+  if (opts &#x26;&#x26; opts.backgroundColor) {
+    if (typeof opts.backgroundColor !== &#x27;string&#x27;) {
+      throw new Error(&#x27;Expected backgroundColor to be a string.&#x27;);
+    }
+    this.backgroundColor = opts.backgroundColor;
+  }
+
+  if (opts &#x26;&#x26; opts.headings) {
+    if (!(opts.headings instanceof Array)) {
+      throw new Error(&#x27;Expected headings to be an array.&#x27;);
+    }
+    opts.headings.forEach(function (heading) {
+      if (typeof heading !== &#x27;string&#x27;) {
+        throw new Error(&#x27;Expected headings array to contain strings.&#x27;);
+      }
+    });
+    this.headings = opts.headings;
+  }
+
+  if (opts &#x26;&#x26; opts.paragraphs) {
+    if (!(opts.paragraphs instanceof Array)) {
+      throw new Error(&#x27;Expected paragraphs to be an array.&#x27;);
+    }
+    opts.paragraphs.forEach(function (paragraph) {
+      if (typeof paragraph !== &#x27;string&#x27;) {
+        throw new Error(&#x27;Expected paragraphs array to contain strings.&#x27;);
+      }
+    });
+    this.paragraphs = opts.paragraphs;
+  }
+
+  if (this.headings || this.paragraphs) {
+    if (!this.headings) {
+      throw new Error(&#x27;Expected headings as paragraphs is set.&#x27;);
+    }
+    if (!this.paragraphs) {
+      throw new Error(&#x27;Expected paragraphs as headings is set.&#x27;);
+    }
+    if (this.headings.length !== this.paragraphs.length) {
+      throw new Error(&#x27;Number of headings must equal the number of paragraphs.&#x27;);
+    }
+  }
+
+  if (opts &#x26;&#x26; opts.lastUpdated) {
+    if (!(opts.lastUpdated instanceof Date)) {
+      throw new Error(&#x27;Expected lastUpdated to be a Date.&#x27;);
+    }
+    this.lastUpdated = opts.lastUpdated;
+  }
+
+  if (opts &#x26;&#x26; opts.locationName) {
+    if (typeof opts.locationName !== &#x27;string&#x27;) {
+      throw new Error(&#x27;Expected locationName to be a string.&#x27;);
+    }
+    this.locationName = opts.locationName;
+  }
+
+  if (opts &#x26;&#x26; opts.sender) {
+    if (typeof opts.sender !== &#x27;string&#x27;) {
+      throw new Error(&#x27;Expected sender to be a string.&#x27;);
+    }
+    this.sender = opts.sender;
+  }
+
+  if (opts &#x26;&#x26; opts.broadcaster) {
+    if (typeof opts.broadcaster !== &#x27;string&#x27;) {
+      throw new Error(&#x27;Expected ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var userToken = &#x27;831ac9f096134d8f841b63bb5e80bda3&#x27;;
+
+var pin = new Timeline.Pin({
+  id: &#x27;test-pin-5245&#x27;,
+  time: new Date(),
+  duration: 10,
+  layout: new Timeline.Pin.<span class="apidocCodeKeywordSpan">Layout</span>({
+    type: Timeline.Pin.LayoutType.GENERIC_PIN,
+    tinyIcon: Timeline.Pin.Icon.NOTIFICATION_FLAG,
+    title: &#x27;Pin Title&#x27;
+  })
+});
+
+timeline.sendUserPin(userToken, pin, function (err) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pebble-api.Pin.Notification" id="apidoc.element.pebble-api.Pin.Notification">
+        function <span class="apidocSignatureSpan">pebble-api.Pin.</span>Notification
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Notification = function (opts) {
+
+  if (opts &#x26;&#x26; opts.time) {
+    if (!(opts.time instanceof Date)) {
+      throw new Error(&#x27;Expected time to be a Date.&#x27;);
+    }
+    this.time = opts.time;
+  }
+
+  if (opts &#x26;&#x26; opts.layout) {
+    this.layout =
+      opts.layout instanceof Layout ? opts.layout : new Layout(opts.layout);
+  }
+
+  if (!this.layout) {
+    throw new Error(&#x27;`layout` is required by Notification.&#x27;);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pebble-api.Pin.Reminder" id="apidoc.element.pebble-api.Pin.Reminder">
+        function <span class="apidocSignatureSpan">pebble-api.Pin.</span>Reminder
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Reminder = function (opts) {
+  if (opts &#x26;&#x26; opts.time) {
+    if (!(opts.time instanceof Date)) {
+      throw new Error(&#x27;Expected time to be a Date.&#x27;);
+    }
+    this.time = opts.time;
+  }
+
+  if (opts &#x26;&#x26; opts.layout) {
+    this.layout =
+      opts.layout instanceof Layout ? opts.layout : new Layout(opts.layout);
+  }
+
+  if (!this.time) {
+    throw new Error(&#x27;`time` is required by Reminder.&#x27;);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pebble-api.Pin.Action" id="apidoc.module.pebble-api.Pin.Action">module pebble-api.Pin.Action</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pebble-api.Pin.Action.Action" id="apidoc.element.pebble-api.Pin.Action.Action">
+        function <span class="apidocSignatureSpan">pebble-api.Pin.</span>Action
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Action = function (opts) {
+
+  if (opts &#x26;&#x26; opts.title) {
+    if (typeof opts.title !== &#x27;string&#x27;) {
+      throw new Error(&#x27;Expected title to be a string.&#x27;);
+    }
+    this.title = opts.title;
+  }
+
+  if (opts &#x26;&#x26; opts.type) {
+    if (typeof opts.type !== &#x27;string&#x27;) {
+      throw new Error(&#x27;Expected type to be a string.&#x27;);
+    }
+    this.type = opts.type;
+  }
+
+  if (opts &#x26;&#x26; opts.launchCode) {
+    if (typeof opts.launchCode !== &#x27;number&#x27;) {
+      throw new Error(&#x27;Expected launchCode to be a number.&#x27;);
+    }
+    this.launchCode = opts.launchCode;
+  }
+
+  if (!this.type) {
+    throw new Error(&#x27;`type` is required by Action.&#x27;);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pebble-api.Pin.Layout" id="apidoc.module.pebble-api.Pin.Layout">module pebble-api.Pin.Layout</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pebble-api.Pin.Layout.Layout" id="apidoc.element.pebble-api.Pin.Layout.Layout">
+        function <span class="apidocSignatureSpan">pebble-api.Pin.</span>Layout
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Layout = function (opts) {
+
+  if (opts &#x26;&#x26; opts.type) {
+    if (typeof opts.type !== &#x27;string&#x27;) {
+      throw new Error(&#x27;Expected type to be a string.&#x27;);
+    }
+    this.type = opts.type;
+  }
+
+  if (opts &#x26;&#x26; opts.title) {
+    if (typeof opts.title !== &#x27;string&#x27;) {
+      throw new Error(&#x27;Expected title to be a string.&#x27;);
+    }
+    this.title = opts.title;
+  }
+
+  if (opts &#x26;&#x26; opts.shortTitle) {
+    if (typeof opts.shortTitle !== &#x27;string&#x27;) {
+      throw new Error(&#x27;Expected shortTitle to be a string.&#x27;);
+    }
+    this.shortTitle = opts.shortTitle;
+  }
+
+  if (opts &#x26;&#x26; opts.subtitle) {
+    if (typeof opts.subtitle !== &#x27;string&#x27;) {
+      throw new Error(&#x27;Expected subtitle to be a string.&#x27;);
+    }
+    this.subtitle = opts.subtitle;
+  }
+
+  if (opts &#x26;&#x26; opts.body) {
+    if (typeof opts.body !== &#x27;string&#x27;) {
+      throw new Error(&#x27;Expected body to be a string.&#x27;);
+    }
+    this.body = opts.body;
+  }
+
+  if (opts &#x26;&#x26; opts.tinyIcon) {
+    if (typeof opts.tinyIcon !== &#x27;string&#x27;) {
+      throw new Error(&#x27;Expected tinyIcon to be a string.&#x27;);
+    }
+    this.tinyIcon = opts.tinyIcon;
+  }
+
+  if (opts &#x26;&#x26; opts.smallIcon) {
+    if (typeof opts.smallIcon !== &#x27;string&#x27;) {
+      throw new Error(&#x27;Expected smallIcon to be a string.&#x27;);
+    }
+    this.smallIcon = opts.smallIcon;
+  }
+
+  if (opts &#x26;&#x26; opts.largeIcon) {
+    if (typeof opts.largeIcon !== &#x27;string&#x27;) {
+      throw new Error(&#x27;Expected largeIcon to be a string.&#x27;);
+    }
+    this.largeIcon = opts.largeIcon;
+  }
+
+  if (opts &#x26;&#x26; opts.foregroundColor) {
+    if (typeof opts.foregroundColor !== &#x27;string&#x27;) {
+      throw new Error(&#x27;Expected foregroundColor to be a string.&#x27;);
+    }
+    this.foregroundColor = opts.foregroundColor;
+  }
+
+  if (opts &#x26;&#x26; opts.primaryColor) {
+    if (typeof opts.primaryColor !== &#x27;string&#x27;) {
+      throw new Error(&#x27;Expected primaryColor to be a string.&#x27;);
+    }
+    this.primaryColor = opts.primaryColor;
+  }
+
+  if (opts &#x26;&#x26; opts.secondaryColor) {
+    if (typeof opts.secondaryColor !== &#x27;string&#x27;) {
+      throw new Error(&#x27;Expected secondaryColor to be a string.&#x27;);
+    }
+    this.secondaryColor = opts.secondaryColor;
+  }
+
+  if (opts &#x26;&#x26; opts.backgroundColor) {
+    if (typeof opts.backgroundColor !== &#x27;string&#x27;) {
+      throw new Error(&#x27;Expected backgroundColor to be a string.&#x27;);
+    }
+    this.backgroundColor = opts.backgroundColor;
+  }
+
+  if (opts &#x26;&#x26; opts.headings) {
+    if (!(opts.headings instanceof Array)) {
+      throw new Error(&#x27;Expected headings to be an array.&#x27;);
+    }
+    opts.headings.forEach(function (heading) {
+      if (typeof heading !== &#x27;string&#x27;) {
+        throw new Error(&#x27;Expected headings array to contain strings.&#x27;);
+      }
+    });
+    this.headings = opts.headings;
+  }
+
+  if (opts &#x26;&#x26; opts.paragraphs) {
+    if (!(opts.paragraphs instanceof Array)) {
+      throw new Error(&#x27;Expected paragraphs to be an array.&#x27;);
+    }
+    opts.paragraphs.forEach(function (paragraph) {
+      if (typeof paragraph !== &#x27;string&#x27;) {
+        throw new Error(&#x27;Expected paragraphs array to contain strings.&#x27;);
+      }
+    });
+    this.paragraphs = opts.paragraphs;
+  }
+
+  if (this.headings || this.paragraphs) {
+    if (!this.headings) {
+      throw new Error(&#x27;Expected headings as paragraphs is set.&#x27;);
+    }
+    if (!this.paragraphs) {
+      throw new Error(&#x27;Expected paragraphs as headings is set.&#x27;);
+    }
+    if (this.headings.length !== this.paragraphs.length) {
+      throw new Error(&#x27;Number of headings must equal the number of paragraphs.&#x27;);
+    }
+  }
+
+  if (opts &#x26;&#x26; opts.lastUpdated) {
+    if (!(opts.lastUpdated instanceof Date)) {
+      throw new Error(&#x27;Expected lastUpdated to be a Date.&#x27;);
+    }
+    this.lastUpdated = opts.lastUpdated;
+  }
+
+  if (opts &#x26;&#x26; opts.locationName) {
+    if (typeof opts.locationName !== &#x27;string&#x27;) {
+      throw new Error(&#x27;Expected locationName to be a string.&#x27;);
+    }
+    this.locationName = opts.locationName;
+  }
+
+  if (opts &#x26;&#x26; opts.sender) {
+    if (typeof opts.sender !== &#x27;string&#x27;) {
+      throw new Error(&#x27;Expected sender to be a string.&#x27;);
+    }
+    this.sender = opts.sender;
+  }
+
+  if (opts &#x26;&#x26; opts.broadcaster) {
+    if (typeof opts.broadcaster !== &#x27;string&#x27;) {
+      throw new Error(&#x27;Expected ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var userToken = &#x27;831ac9f096134d8f841b63bb5e80bda3&#x27;;
+
+var pin = new Timeline.Pin({
+  id: &#x27;test-pin-5245&#x27;,
+  time: new Date(),
+  duration: 10,
+  layout: new Timeline.Pin.<span class="apidocCodeKeywordSpan">Layout</span>({
+    type: Timeline.Pin.LayoutType.GENERIC_PIN,
+    tinyIcon: Timeline.Pin.Icon.NOTIFICATION_FLAG,
+    title: &#x27;Pin Title&#x27;
+  })
+});
+
+timeline.sendUserPin(userToken, pin, function (err) {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pebble-api.Pin.Notification" id="apidoc.module.pebble-api.Pin.Notification">module pebble-api.Pin.Notification</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pebble-api.Pin.Notification.Notification" id="apidoc.element.pebble-api.Pin.Notification.Notification">
+        function <span class="apidocSignatureSpan">pebble-api.Pin.</span>Notification
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Notification = function (opts) {
+
+  if (opts &#x26;&#x26; opts.time) {
+    if (!(opts.time instanceof Date)) {
+      throw new Error(&#x27;Expected time to be a Date.&#x27;);
+    }
+    this.time = opts.time;
+  }
+
+  if (opts &#x26;&#x26; opts.layout) {
+    this.layout =
+      opts.layout instanceof Layout ? opts.layout : new Layout(opts.layout);
+  }
+
+  if (!this.layout) {
+    throw new Error(&#x27;`layout` is required by Notification.&#x27;);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pebble-api.Pin.Reminder" id="apidoc.module.pebble-api.Pin.Reminder">module pebble-api.Pin.Reminder</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pebble-api.Pin.Reminder.Reminder" id="apidoc.element.pebble-api.Pin.Reminder.Reminder">
+        function <span class="apidocSignatureSpan">pebble-api.Pin.</span>Reminder
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Reminder = function (opts) {
+  if (opts &#x26;&#x26; opts.time) {
+    if (!(opts.time instanceof Date)) {
+      throw new Error(&#x27;Expected time to be a Date.&#x27;);
+    }
+    this.time = opts.time;
+  }
+
+  if (opts &#x26;&#x26; opts.layout) {
+    this.layout =
+      opts.layout instanceof Layout ? opts.layout : new Layout(opts.layout);
+  }
+
+  if (!this.time) {
+    throw new Error(&#x27;`time` is required by Reminder.&#x27;);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pebble-api.Pin.prototype" id="apidoc.module.pebble-api.Pin.prototype">module pebble-api.Pin.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pebble-api.Pin.prototype.addAction" id="apidoc.element.pebble-api.Pin.prototype.addAction">
+        function <span class="apidocSignatureSpan">pebble-api.Pin.prototype.</span>addAction
+        <span class="apidocSignatureSpan">(action)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addAction = function (action) {
+  this.actions.push(
+    action instanceof Action ? action : new Action(action)
+  );
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pebble-api.Pin.prototype.addReminder" id="apidoc.element.pebble-api.Pin.prototype.addReminder">
+        function <span class="apidocSignatureSpan">pebble-api.Pin.prototype.</span>addReminder
+        <span class="apidocSignatureSpan">(reminder)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addReminder = function (reminder) {
+  this.reminders.push(
+    reminder instanceof Reminder ? reminder : new Reminder(reminder)
+  );
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pebble-api.Pin.prototype.addAction" id="apidoc.module.pebble-api.Pin.prototype.addAction">module pebble-api.Pin.prototype.addAction</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pebble-api.Pin.prototype.addAction.addAction" id="apidoc.element.pebble-api.Pin.prototype.addAction.addAction">
+        function <span class="apidocSignatureSpan">pebble-api.Pin.prototype.</span>addAction
+        <span class="apidocSignatureSpan">(action)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addAction = function (action) {
+  this.actions.push(
+    action instanceof Action ? action : new Action(action)
+  );
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pebble-api.Pin.prototype.addReminder" id="apidoc.module.pebble-api.Pin.prototype.addReminder">module pebble-api.Pin.prototype.addReminder</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pebble-api.Pin.prototype.addReminder.addReminder" id="apidoc.element.pebble-api.Pin.prototype.addReminder.addReminder">
+        function <span class="apidocSignatureSpan">pebble-api.Pin.prototype.</span>addReminder
+        <span class="apidocSignatureSpan">(reminder)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addReminder = function (reminder) {
+  this.reminders.push(
+    reminder instanceof Reminder ? reminder : new Reminder(reminder)
+  );
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pebble-api.toString" id="apidoc.module.pebble-api.toString">module pebble-api.toString</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pebble-api.toString.toString" id="apidoc.element.pebble-api.toString.toString">
+        function <span class="apidocSignatureSpan">pebble-api.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toString() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
