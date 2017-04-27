@@ -1,4 +1,7 @@
-# api documentation for  [pebble-api (v0.2.2)](https://github.com/pebble/pebble-api-node)  [![npm package](https://img.shields.io/npm/v/npmdoc-pebble-api.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-pebble-api) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-pebble-api.svg)](https://travis-ci.org/npmdoc/node-npmdoc-pebble-api)
+# npmdoc-pebble-api
+
+#### basic api documentation for  [pebble-api (v0.2.2)](https://github.com/pebble/pebble-api-node)  [![npm package](https://img.shields.io/npm/v/npmdoc-pebble-api.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-pebble-api) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-pebble-api.svg)](https://travis-ci.org/npmdoc/node-npmdoc-pebble-api)
+
 #### Pebble API client
 
 [![NPM](https://nodei.co/npm/pebble-api.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/pebble-api)
@@ -63,7 +66,8 @@
         "coverage": "make test-cov",
         "test": "make test"
     },
-    "version": "0.2.2"
+    "version": "0.2.2",
+    "bin": {}
 }
 ```
 
